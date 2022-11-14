@@ -19,5 +19,13 @@ user2 = User("Yoonsoo", "yoonsoo@codeit.kr", "abcdef")
 user3 = User("Taeho", "taeho@codeit.kr", "123abc")
 user4 = User("Lisa", "lisa@codeit.kr", "abc123")
 
+# 인스턴스 변수를 설정하면 클래스 변수보다 우선순위가 스코프가 더 좁다. (우선순위 높음)
+# 클래스 변수를 설정할 때는 클래스 이름을 가지고 변경하는 것이 좋다. 
+# user1.count = 5
+User.count = 5
+
 # 모든 유저의 수를 나타내는 변수 
 print(User.count)
+print(user1.count)
+print(user2.count)
+print(user3.count)
