@@ -27,3 +27,13 @@ user4 = User("Lisa", "lisa@codeit.kr", "abc123")
 
 User.number_of_users()
 user1.number_of_users()
+
+'''
+인스턴스 메소드 사용 
+User.say_hello(user1)
+user1.say_hello()
+
+클래스 메소드 사용 
+User.number_of_users()
+user1.number_of_users()
+'''
