@@ -19,8 +19,16 @@ class User:
     #     print("총 유저 수는 {}입니다.".format(cls.count))
     
     def number_of_users(self):
+        '''
+        클래스 메소드로 만드는 것이 권장되는데, 이는 인스턴스 변수를 사용하고 있지 않기 때문이다. 
+        인스턴스 변수 사용 => 인스턴스 메소드
+        클래스 변수 사용 => 클래스 메소드
+        클래스 변수와 인스턴스 변수 둘 다 쓴다면 인스턴스 메소드를 사용하면 된다. 둘다 가져올 수 
+        있기 때문!
+        '''
         print("총 유저 수는 {}입니다.".format(User.count))    
         
+    
 
 user1 = User("Young", "young@codeit.kr", "123456")
 user2 = User("Yoonsoo", "yoonsoo@codeit.kr", "abcdef")
