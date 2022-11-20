@@ -6,18 +6,15 @@ class User:
 
     @classmethod
     def from_string(cls, string_params):
-        # 코드를 쓰세요
         name, email, password = string_params.split(",")
         return cls(name, email, password)
 
     @classmethod
     def from_list(cls, list_params):
-        # 코드를 쓰세요
         return cls(list_params[0], list_params[1], list_params[2])
 
-# 유저 생성 및 초기값 설정
-younghoon = User.from_string("강영훈,younghoon@codeit.kr,123456")
-yoonsoo = User.from_list(["이윤수", "yoonsoo@codeit.kr", "abcdef"])
+user1 = User.from_string("******,********,******")
+user2 = User.from_list(["******", "******", "******"])
 
-print(younghoon.name, younghoon.email, younghoon.password)
-print(yoonsoo.name, yoonsoo.email, yoonsoo.password)
+print(user1.name, user1.email, user1.password)
+print(user2.name, user2.email, user2.password)
