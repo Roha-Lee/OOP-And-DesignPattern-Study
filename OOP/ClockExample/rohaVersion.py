@@ -23,33 +23,37 @@ class Clock:
     
     def set(self, hour, minute, second):
         self.seconds = Clock.hms_to_seconds(hour, minute, second)
+ 
 
-# 1시 30분 48초인 시계 인스턴스 생성
+# 초가 60이 넘을 때 분이 늘어나는지 확인하기
+print("시간을 1시 30분 48초로 설정합니다")
 clock = Clock(1, 30, 48)
-    
+print(clock)
+
 # 13초를 늘린다
+print("13초가 흘렀습니다")
 for i in range(13):
     clock.tick()
-    
-# 시계의 현재 시간 출력
 print(clock)
-    
-# 2시 3분 58초로 시계 세팅
-clock.set(2, 3, 58)
-    
+
+# 분이 60이 넘을 때 시간이 늘어나는지 확인
+print("시간을 2시 59분 58초로 설정합니다")
+clock.set(2, 59, 58)
+print(clock)
+
 # 5초를 늘린다
+print("5초가 흘렀습니다")
 for i in range(5):
     clock.tick()
-    
-# 시계의 현재 시간 출력
 print(clock)
-    
-# 23시 59분 57초로 세팅
+
+# 시간이 24가 넘을 때 00:00:00으로 넘어가는 지 확인
+print("시간을 23시 59분 57초로 설정합니다")
 clock.set(23, 59, 57)
-    
+print(clock)
+
 # 5초를 늘린다
+print("5초가 흘렀습니다")
 for i in range(5):
     clock.tick()
-    
-# 시계의 현재 시간 출력
 print(clock)
