@@ -44,3 +44,4 @@ class BankAccount:
         """apply interest to current balance"""
         self.balance *= 1 + BankAccount.interest
         
+help(BankAccount) # docstring이 요약되어 나온다. 
