@@ -21,21 +21,26 @@ class SomeClass:
 
 # 변수, 클래스 이름을 잘 짓는 것도 추상화의 일종이다. 
 class BankAccount:
+    """은행 계좌 클래스"""
     interest = 0.02
     
     def __init__(self, owner_name, balance):
+        """Constructor: name(String), balance(Float)"""
         self.owner_name = owner_name
         self.balance = balance
     
     def deposit(self, amount):
+        """deposit amount of money to current balance: amount(Float)"""
         self.balance += amount
         
     def withdraw(self, amount):
+        """withdraw amount of money to current balance: amount(Float)"""
         if self.balance < amount:
             print("Insufficient balance!")
         else:
             self.balance -= amount
     
     def add_interest(self):
+        """apply interest to current balance"""
         self.balance *= 1 + BankAccount.interest
         
