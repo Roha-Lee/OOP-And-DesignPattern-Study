@@ -24,11 +24,11 @@ class Citizen:
         return "${}씨는 ${}살입니다.".format(self.name, self.__age)
     
     def get_age(self) -> int:
-        # age의 값을 읽을 수 있다. 
+        # age의 값을 읽을 수 있다. getter 메소드
         return self.__age
     
     def set_age(self, age: int) -> None:
-        # age값을 설정해 줄 수 있다. 
+        # age값을 설정해 줄 수 있다. setter 메소드
         self.__age = age
         
 roha = Citizen("rohagru", 20, "1234567")
@@ -38,4 +38,9 @@ print(roha.get_age())
 '''
 캡슐화의 두번째 정의: 객체의 속성과 그것을 사용하는 행동을 하나로 묶는 것. 
 변수에 접근하는 방식을 몇개의 클래스로 제한하는 것. 
+
+캡슐화 정리 
+1. 클래스 밖에서 접근 못하게 할 변수, 메소드 정하기 
+2. 변수나 메소드 이름 앞에 언더바 2개 붙이기 
+3. 변수에 간접 접근할 수 있게 메소드 추가하기 
 '''
