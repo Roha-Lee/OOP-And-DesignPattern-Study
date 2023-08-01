@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "name": "chapter1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "duck-class.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
