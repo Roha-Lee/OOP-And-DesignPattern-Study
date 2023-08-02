@@ -1,4 +1,4 @@
-import { MallardDuck, RedheadDuck, RubberDuck } from "./duck.js"
+import { MallardDuck, RedheadDuck, RubberDuck } from "./duck-new"
 
 const mallardDuck = new MallardDuck();
 const redheadDuck = new RedheadDuck();

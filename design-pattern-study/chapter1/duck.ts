@@ -1,4 +1,5 @@
 export class Duck {
+    type: String;
     constructor(type = "오리") {
         this.type = type;
     }
