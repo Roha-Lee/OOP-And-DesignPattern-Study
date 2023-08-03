@@ -8,8 +8,16 @@ export class Duck {
     constructor(type = "오리") {
         this.type = type;
         this.quackBehavior = new Quack();
-        this.flyBehavior = new FlyWithWings();
+        this.flyBehavior = new FlyNoWay();
     }
+    setFlyBehavior(flyBehavior: FlyBehavior) {
+        this.flyBehavior = flyBehavior;
+    }
+
+    setQuackBehavior(quackBehavior: QuackBehavior) {
+        this.quackBehavior = quackBehavior;
+    }
+
     quack() {
         this.quackBehavior.quack();
     }
@@ -24,22 +32,8 @@ export class Duck {
     }
 }
 
-export class MallardDuck extends Duck {
+export class ModelDuck extends Duck {
     constructor() {
-        super("청둥오리");
-    }
-}
-
-export class RedheadDuck extends Duck {
-    constructor() {
-        super("빨간머리오리");
-    }
-}
-
-export class RubberDuck extends Duck {
-    constructor() {
-        super("고무오리");
-        this.quackBehavior = new Squeak();
-        this.flyBehavior = new FlyNoWay();
+        super("모형오리");
     }
 }

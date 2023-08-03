@@ -1,15 +1,13 @@
-import { MallardDuck, RedheadDuck, RubberDuck } from "./duck-new"
+import { ModelDuck } from "./duck-new"
+import { FlyWithWings } from "./fly-behavior";
+const modelDuck = new ModelDuck();
 
-const mallardDuck = new MallardDuck();
-const redheadDuck = new RedheadDuck();
-const rubberDuck = new RubberDuck();
+modelDuck.display();
+modelDuck.quack();
+modelDuck.fly();
 
-const ducks = [mallardDuck, redheadDuck, rubberDuck];
+modelDuck.setFlyBehavior(new FlyWithWings());
 
-ducks.forEach(duck => {
-    duck.display();
-    duck.quack();
-    duck.swim();
-    duck.fly();
-    console.log("-----");
-});
+modelDuck.display();
+modelDuck.quack();
+modelDuck.fly();
